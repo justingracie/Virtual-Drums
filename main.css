@@ -1,3 +1,63 @@
 body{
-    background-color: slateblue;
+    background-color: #6a5acd;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+.sliders{
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+.slider-kick{
+     position: relative;
+     width: 300px;
+     height: 8px;
+}
+
+.slider-kick input[type="range"]{
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 304px;
+    height: 8px;
+    -webkit-appearance: none;
+    background: transparent;
+    z-index: 99;
+}
+.slider-kick input::-webkit-slider-kick-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px; 
+    background-color: #fff;
+    border: 2px solid rgb(9, 205, 240);
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #fff;
+    border-radius: 50%;
+}
+
+.slider-kick progress{
+    width: 300px;
+    height: 8px;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.slider-kick progress::-webkit-progress-bar {
+    background: #fff;
+}
+.slider-kick progress::-webkit-progress-value {
+    background: rgb(9, 205, 240);
+}
+.sliderKickValue{
+    width: 28px;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+
 }

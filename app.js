@@ -6,3 +6,14 @@ window.addEventListener('keydown', function(e){
     audio.play()
     console.log(audio)
 })
+
+window.onload = function(){
+    sliderKick = document.querySelector(".slider-kick input");
+    sliderKick.oninput = function(){
+        progressBar = document.querySelector(".slider-kick progress");
+        progressBar.value = sliderKick.value;
+        sliderKickValue = document.querySelector(".sliderKickValue");
+        sliderKickValue.innerHTML = sliderKick.value;
+
+    }
+}
